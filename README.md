@@ -30,11 +30,11 @@
  ## Or:
   - Run `mvn compile`
   - Run `mvn package`
-  - Run `java -cp target/LAB_2-1.0-SNAPSHOT.jar ua.lviv.iot.military_unit.App` 
-  - Run `java -cp target/LAB_2-1.0-SNAPSHOT.jar ua.lviv.iot.military_unit.Main` 
+  - Run `java -cp target/LAB_2-1.0-SNAPSHOT.jar ua.lviv.iot.lightShop.App` 
+  - Run `java -cp target/LAB_2-1.0-SNAPSHOT.jar ua.lviv.iot.lightShop.Main` 
 
  ## For sending requests use this commands
-  - GET : `curl -v http://localhost:8080/armament/1`
-  - POST : `curl -v -d "name=name" http://localhost:8080/armament`
-  - PUT : `curl -v -X PUT -d "name=newName http://localhost:8080/armament/1`
-  - DELETE : `curl -v -X DELETE http://localhost:8080/armament/1`
+  - GET : `curl -v http://localhost:8080/good/1`
+  - POST : `curl -v -d "name=name" http://localhost:8080/good`
+  - PUT : `curl -v -X PUT -d "name=newName http://localhost:8080/good/1`
+  - DELETE : `curl -v -X DELETE http://localhost:8080/good/1`

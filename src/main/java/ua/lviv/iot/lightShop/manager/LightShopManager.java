@@ -1,7 +1,7 @@
-package ua.lviv.iot.lightShop;
+package ua.lviv.iot.lightShop.manager;
 
-import ua.lviv.iot.lightShop.Enum.SortOrder;
-import ua.lviv.iot.lightShop.Enum.TypeOfEnergySaving;
+import ua.lviv.iot.lightShop.models.SortOrder;
+import ua.lviv.iot.lightShop.models.TypeOfEnergySaving;
 import ua.lviv.iot.lightShop.models.Good;
 
 import java.util.*;
@@ -9,14 +9,14 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class LightShopManager {
-    private List <Good> store;
+    private List<Good> store;
 
-    public LightShopManager(List <Good> store){
+    public LightShopManager(List<Good> store) {
         this.store = store;
     }
 
     public void printGoods() {
-        for(Good item : store) {
+        for (Good item : store) {
             System.out.println("---------");
             System.out.println(item);
             System.out.println("price: " + item.getPrice());
@@ -41,12 +41,7 @@ public class LightShopManager {
                     firstItem.getPowerInWatts() - secondItem.getPowerInWatts());
         } else {
             this.store.sort((firstItem, secondItem) ->
-                    secondItem.getPowerInWatts()-firstItem.getPowerInWatts());
+                    secondItem.getPowerInWatts() - firstItem.getPowerInWatts());
         }
     }
-
-    public void  searchByEnergySaving(TypeOfEnergySaving typeOfEnergySaving) {
-        store = store.stream().filter(item -> item.getTypeOfEnergySaving().equals(typeOfEnergySaving)).collect(Collectors.toList());
-    }
 }
-
